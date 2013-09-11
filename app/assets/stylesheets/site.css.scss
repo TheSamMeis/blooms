@@ -85,7 +85,7 @@
 	}*/
 
 #signupbg{
-	background: url(pinkflowers.jpg);
+	background: url(../images/pinkflowers.jpg);
 	background-size: 1500px;
 	width:100%;
 	height: 500px;
@@ -225,7 +225,7 @@ left: -100px;
 }
 
 #howitworks{
-background: url(howitworks.jpg);
+background: url(../images/howitworks.jpg);
 /*	background-size: 1500px;*/
 height:250px;
 width: 800px;
@@ -234,17 +234,17 @@ margin:auto;
 }
 
 #romantic .photo{
-		background: url(romanticflowers.jpg);
+		background: url(../images/romanticflowers.jpg);
 		background-size: 313px;
 	}
 
 	#bright .photo{
-		background: url(brightflowers.jpg);
+		background: url(../images/brightflowers.jpg);
 		background-size: 313px;
 	}
 
 #farmers .photo{
-		background: url(farmersmarket.jpg);
+		background: url(../images/farmersmarket.jpg);
 		background-size: 313px;
 	}
 
@@ -325,7 +325,7 @@ margin:auto;
 	height: 303px;
 	position: absolute;
 	top: 162px;
-	  background: url( selected.png)
+	  background: url(../images/selected.png)
 }
 
 
@@ -376,7 +376,7 @@ margin:auto;
 
 
 .ui-datepicker-header {  
-    background: url('pinkbg.jpg') repeat 0 0 #000;  
+    background: url('../images/pinkbg.jpg') repeat 0 0 #000;  
     color: #ffffff;  
     font-weight: bold;  
     line-height: 30px;  
@@ -471,7 +471,7 @@ width:100%;
 }
 
 #order_summary{
-	background: url(scallopsquare.jpg);
+	background: url(../images/scallopsquare.jpg);
 	height: 148px;
 	width: 400px;
 	float:left;
