@@ -18,6 +18,8 @@ gem 'jquery-ui-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'rails_12factor', group: :production
+
 # Use jquery as the JavaScript library
 group :assets do
 
@@ -54,13 +56,14 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "better_errors", ">= 0.0.8", :group => :development
 gem "binding_of_caller", ">= 0.6.8", :group => :development
 
-gem 'nokogiri', '>= 1.5.5'
+
 gem 'countries', '>= 0.8.4'
 gem 'httpi', '>= 1.1.1'
 gem 'httpclient', '>= 2.3.0.1'
 gem 'rspec-rails', '2.13.1'
 gem 'selenium-webdriver'
-  gem "comma", "~> 3.0"
+gem "comma", "~> 3.0"
+gem 'figaro'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

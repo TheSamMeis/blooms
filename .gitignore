@@ -21,3 +21,6 @@
 /config/initializers/recurly.rb
 /vendor/bundle
 /config/application.yml
+
+# Ignore application configuration
+/config/application.yml
