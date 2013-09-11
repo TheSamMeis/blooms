@@ -4,7 +4,7 @@
 <header class="site-header">
 	<div class="signup-bar">
 		<div id='headerContainer'>
-			<a href = '/'><img src='/assets/bly.jpg' style='width:174px; margin-left: 20px; float:left; position:relative; top:-19px ;'></a>
+			<a href = '/'><%= image_tag('../images/bly.jpg', class: 'headerLogo')  %> </a>
 			
 			<div id='headerLinks'>
 				<%	if session[:user_id] == nil %>
