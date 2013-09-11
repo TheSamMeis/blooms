@@ -1,0 +1,34 @@
+
+
+
+<header class="site-header">
+	<div class="signup-bar">
+		<div id='headerContainer'>
+			<a href = '/'><img src='/assets/bly.jpg' style='width:174px; margin-left: 20px; float:left; position:relative; top:-19px ;'></a>
+			
+			<div id='headerLinks'>
+				<%	if session[:user_id] == nil %>
+					<a class=" btn btn-nav content-no-logged-in" href="/signup" data-panel-nav="clear">SUBSCRIBE</a>
+				<%end%>
+				
+				<% if session[:user_id] %>
+				<%= link_to 'LOG OUT' , logout_path %>
+					<%= link_to 'MY ACCOUNT' , user_orders_path(session[:user_id])%>
+				<% else %>
+					<%= link_to 'MY ACCOUNT', new_session_path %>
+				<%end%>
+				<a href="#"> BLOG </a>
+				<a href="#"> GIFT </a>
+				<a href="#"> ABOUT </a>
+			
+		</div>
+		
+		</div>
+	</div>
+</header>
+
+<div style="height:35px">
+</div>
+
+
+

@@ -1,0 +1,51 @@
+<div id="edit_form">
+
+  <%= form_for(@ship_address) do |f| %>
+    
+      <div class="field">
+      <%= f.label :company, 'Company' %><br>
+      <%= f.text_field :company %>
+    </div>
+
+     <div class="field">
+      <%= f.label :first_name, 'First Name' %><br>
+      <%= f.text_field :first_name, :required => true %>
+    </div>
+
+     <div class="field">
+      <%= f.label :last_name, 'Last Name' %><br>
+      <%= f.text_field :last_name, :required => true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address1, 'Address' %><br>
+      <%= f.text_field :address1, :required => true %>
+    </div>
+
+   <div class="field">
+      <%= f.label :address2, 'Appartment or Suite Number' %><br>
+      <%= f.text_field :address2 %>
+    </div>
+
+   <div class="field">
+      <%= f.label :city, 'City' %><br>
+      <%= f.text_field :city, :required => true %>
+    </div>
+
+   <div class="field">
+      <%= f.label :state, 'State' %><br>
+      <%= f.text_field :state,  :required => true %>
+    </div>
+
+
+   <div class="field">
+      <%= f.label :postalcode, 'Postal Code' %><br>
+      <%= f.text_field :postalcode, :required => true %>
+    </div>
+
+
+    <div class="actions">
+      <%= submit_tag("Update Shipping Info", :class => 'button') %>
+    </div>
+  <% end %>
+</div>

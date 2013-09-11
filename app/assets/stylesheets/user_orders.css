@@ -1,0 +1,42 @@
+.subscriptionList{
+	width: 400px;
+}
+
+.subscriptionmgmt{
+
+	width: 600px;
+	background-color: #ffa19f;
+	margin: 15px;
+	padding: 30px 30px;
+
+}
+
+.subscriptionmgmt a{
+
+	color: #c83a48;
+	text-decoration: none;
+
+}
+
+.subscriptionmgmt a:hover{
+
+	color: #fff;
+	text-decoration: none;
+
+}
+
+.scallopAccount{
+	background:url(accountscallops.jpg);
+	padding: 30px;
+	width: 240px;
+	height: 330px;
+	position: relative;
+	left: 650px;
+	top: -150px;
+}
+#typeChoice{
+	display: inline;
+}
+#frequencyChoice{
+	display: inline;
+}

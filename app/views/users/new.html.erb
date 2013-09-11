@@ -1,0 +1,42 @@
+<div id='signup' class='cont'>
+
+<div id='signupbg'>
+ 
+  <div id='whiteform'>
+
+    <div id='formhead'> 
+        Getting flower deliveries is tres simple
+    </div>
+    <div id='formsubhead'>
+      Enter your information below to continue
+    </div>
+    <div style='height:20px'>
+       <p id="notice" style="text-align:center;"><%= flash[:notice] %></p>
+    </div>
+    <div id="signupform">
+     
+   
+       
+       <%= form_tag do %>
+        <div class="field" style='position: relative; left:-40px;'>
+          <%= label_tag :first_name, 'First Name:' %>
+         <%=text_field_tag :first_name %>
+        </div>
+
+        <div class="field">
+          <%= label_tag :email, 'Email:' %>
+          <%= text_field_tag :email %>
+        </div>
+
+        <div class="field" style='position: relative; left:-35px;'>
+          <%= label_tag :password, 'Password:' %>
+          <%= password_field_tag :password %>
+        </div>
+        <div class="actions" style='position: relative; left:40px; top:20px;'>
+          <%= submit_tag("GET STARTED", class: "button" ) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,36 @@
+  <script>
+    $(function(){
+      Recurly.config({
+        subdomain: 'gilded-blooms'
+        , currency: 'USD'
+      });
+ 
+ 
+      Recurly.buildSubscriptionForm({
+        target: '#recurly-form',
+        planCode: '<%= @plan %>' ,
+        successURL: '/',
+        account : {
+          accountCode: '<%=@user.id%>',
+          firstName: '',
+          lastName: '', 
+          email: '<%=@user.email%>'
+        },
+        successURL: 'http://localhost:3000/',
+        signature: '<%=@signature%>'
+      });
+        
+ 
+    });
+    </script>
+<div id='signup' class='cont'>
+
+<div id='signupbg' class="address_page">
+ 
+  <div id='whiteform' class="address_page">
+  
+    <div id="recurly-form"></div>
+
+</div>
+</div>
+</div>

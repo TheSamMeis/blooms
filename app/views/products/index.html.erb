@@ -1,0 +1,45 @@
+<h1>Listing products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>F name</th>
+      <th>L name</th>
+      <th>Company</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.f_name %></td>
+        <td><%= product.l_name %></td>
+        <td><%= product.company %></td>
+        <td><%= product.address1 %></td>
+        <td><%= product.address2 %></td>
+        <td><%= product.city %></td>
+        <td><%= product.state %></td>
+        <td><%= product.country %></td>
+        <td><%= product.zip %></td>
+        <td><%= product.phone %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>

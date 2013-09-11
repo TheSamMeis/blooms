@@ -1,0 +1,63 @@
+
+<header class="site-header dashboard">
+	<div class="signup-bar dashboard">
+		<div id='headerContainer' class ='clearfix'>
+			<div class='dashboard_header'> 
+				ADMIN VIEW
+			</div>
+				<div id="dashboard_links">
+					<%= link_to 'Update Subs' , :controller => "subscriptions", :action => "update_ship_dates" %>
+					<%= link_to 'Log Out' , logout_path %>
+				
+				</div>
+
+				<nav> 
+				  <ul> 
+				  
+				    <li><a href="/update">Update Subscriptions</a></li> 
+				    <li><a href="/dashboard">Manage Subscriptions</a></li> 
+				    <li><a href="/export">Export</a></li> 
+				    <li><a href="/logout">Log Out</a></li> 
+				  </ul> 
+				  
+				  <select> 
+				    <option value="" selected="selected">Select</option> 
+				    
+				    <option value="/update">Update Shipments</option> 
+				    <option value="/dashboard">Manage Subscpriptions </option> 
+				    <option value="/export">Export</option>
+				       <option value="/logout">Log Out</option>
+				  </select> 
+			</nav>
+
+		</div>
+	
+
+	
+	</div>
+
+
+
+</header>
+
+<div style="height:43px">
+</div>
+
+<div id="side_nav"> 
+
+	<div class="side_box" title="/dashboard"> 
+		<img src="/assets/subscriptions.png"/>
+		Subscriptions
+	</div>
+	<div class="side_box" title="/export"> 
+	<img src="/assets/export.png"/> <br>
+		Export
+	</div>
+
+</div>
+
+
+<div id="bumper">
+
+</div>
+

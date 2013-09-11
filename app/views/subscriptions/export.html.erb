@@ -1,0 +1,21 @@
+<div style='height: 40px'></div>
+
+<h1 style="font-size: 30px;"> Export Order for Delivery </h1>
+ 
+<h2> Select Date or Date Range </h2>
+
+<div id="date_selector">
+
+ <%= form_tag :format => "csv"  do %>
+
+  <div class="field">
+
+    <%=  date_field_tag :ship_date, value = Date.today %>
+  </div>
+  <div class="actions">
+    <%= submit_tag("Export Now", :class => 'button export') %>
+  </div>
+
+<% end %>
+
+</div>

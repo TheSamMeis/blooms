@@ -1,0 +1,125 @@
+	
+
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	</head>
+
+
+
+
+	<div id='sub_bar'>
+	   <div id='username'><%= @subscription.user.first_name %>'s Account 
+	   </div>
+	</div>
+	
+	<div class='account_content'> 
+			<div class='smallSubBoxWrapper billing'>
+				<h3 style="	display:inline-block;">Billing Information</h3> 
+					<div class="edit_link"><%= link_to 'Edit' , edit_ship_address_path %>
+					</div>
+				<div class="smallSubBox"> 
+					<p>
+						<%= @billing_info.first_name %>
+						<%= @billing_info.last_name %>
+					</p>
+					<p>
+						<%= @billing_info.address1 %>
+					</p>
+					<p>
+						<%= @billing_info.address2 %>
+					</p>
+					<p>
+						<%= @billing_info.city %>, <%= @billing_info.state %> <%= @billing_info.zip %>
+					</p>
+
+					<p>
+						credit card: <%= @billing_info.last_four %> 
+						expires: <%= @billing_info.month %>/<%= @billing_info.year %> 
+					</p>
+
+				</div>
+			</div>
+
+			<div class='smallSubBoxWrapper shipping'>
+				<h3>Shipping Information</h3>
+						<div class='edit_link'>
+							<%= link_to 'Edit' , edit_ship_address_path(@subscription.ship_address.id) %>
+						</div>
+				<div class="smallSubBox ">
+
+					<p>
+						<%= @shipping_first_name %> <%= @shipping_last_name %>
+					</p>
+					
+					<p>
+						
+					</p>
+					
+					<p>
+						<%= @shipping_address1 %> 
+					</p>
+
+					<p>
+						<%= @shipping_address2 %> 
+					</p>
+
+					<p>
+						<%= @shipping_city %>, <%= @shipping_state %>  <%= @shipping_zip %> 
+					</p>
+
+				</div>
+			</div>
+		
+
+
+
+			
+			<div class='smallSubBoxWrapper billing'>
+				<h3>Subscription Info</h3>
+				<div class="smallSubBox"> 
+					<p>
+						Type: <%= @type %>
+					
+					</p>
+					<p>
+						Frequency: <%= @frequency %>
+					</p>
+					<p>
+						Status: <%= @status %>
+					</p>
+					<p>
+						Next Shipment: <%= @subscription.next_shipment%>
+					</p>
+				
+
+				</div>
+			</div>
+
+			<div class='smallSubBoxWrapper shipping'>
+				<h3>Subscription Actions</h3>
+				<div class="smallSubBox ">
+								<p>
+						Delete
+					
+					</p>
+					<p>
+						Pause
+					</p>
+					<p>
+						Update
+					</p>
+				</div>
+			</div>
+		
+	</div>
+
+

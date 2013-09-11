@@ -1,0 +1,56 @@
+<div class='dash_content'> 
+
+	<div class="filter_row">
+	View: <span style="color: #f5989d">Active</span> 	<%=link_to "All", all_dashboard_path, :id=>"filter_link" %>
+	</div>
+
+	<table cellspacing="0"  id="subscriptions">
+		<tr> 
+			<th>
+				Acct # 
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Email
+			</th>
+			<th>
+				Status
+			</th>
+			<th>
+				Next Shipment
+			</th>
+		</tr>
+
+
+
+		<% @subscriptions_active.each do |sub| %>
+			<tr> 
+				<td>
+					<%=link_to sub.id, subscription_path(sub.id) %>
+				</td>
+				<td>
+					<%=	sub.user.first_name %>
+		 		</td>
+			
+					<td>
+					<%= sub.user.email %>	
+				</td>
+					<td>
+					<%= sub.subscription_status %>
+				</td>
+					<td>
+					<%= sub.next_shipment %>
+					
+				</td>
+			</tr>
+
+		<%end%>
+
+
+	</table>
+		
+</div>
+
+

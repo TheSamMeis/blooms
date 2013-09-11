@@ -1,0 +1,124 @@
+
+<div class='wrapper options'>	
+<h1>Select Your Delivery Preferences </h1>
+<h2> 1. What kind of flowers do you like? </h2>
+
+<%= form_for(@subscription, :url => { :controller => "site", :action => "subscribe_create"}) do |f| %>
+
+		<div id = "row"  class = "clearfix" style ='margin:auto; width: 940px;'>
+			<div id = "romantic" class = "flowerbox click" >
+				<div class = "photo clearfix" >
+				<div class = "rolltext">
+	         pretty pastels, pinks & soft colors
+					</div>
+						<div class = "overlay">
+					</div>
+					<div class="image_overlay">
+					</div>
+			
+				
+							<div class = "label">
+						<%= f.radio_button(:subscription_type, "romantic", :value => "romantic", :id => "romantic_radio", :class => 'radio_buttons_hide', :checked => true) %>
+						<%= f.label(:subscpription_type_romantic, "Romantic") %>
+					</div>
+				</div>
+			</div>
+
+
+			<div id ="bright" class = "flowerbox">
+				<div class = "photo">
+					<div class = "rolltext">
+		          Bright colors, fun mixed textures
+					</div>
+					<div class = "overlay">
+					</div>			
+					<div class="image_overlay">
+					</div>
+						
+					<div class = "label">
+						<%= f.radio_button(:subscription_type, "brights",  :value => "brights", :id => "brights_radio", :class => 'radio_buttons_hide') %>
+						<%= f.label(:subscpription_type_brights, "Brights") %>
+					</div>
+				</div>
+			</div>
+
+
+			<div id = "farmers" class = "flowerbox" >
+
+				<div class="photo">
+					<div class = "rolltext">
+						mix of it all. chosen fresh from the farmer
+					</div>
+						<div class = "overlay">
+					</div>
+					<div class="image_overlay">
+					</div>
+					<div class = "label">
+						<%= f.radio_button(:subscription_type, "farmers", :id => "farmers_radio",:class => 'radio_buttons_hide') %>
+						<%= f.label(:subscpription_type_farmers, "Farmer's Market") %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+
+	
+
+	<div id ="frequency_buttons">
+		<h2> 2. How Often Do You Want Deliveries?  </h2>
+		<div class='frequency_description_button' >
+			<div class='button frequency selected_frequency' id='2week'>
+			 Every 2 Weeks
+			</div>
+			<div class='frequency_description' >
+				For home never without fresh flowers. 
+			</div>
+			</div>
+			<div class='frequency_description_button' >
+				<div class='button frequency' id='4week'>
+				 Every 4 Weeks
+			</div>
+			<div class='frequency_description' >
+				The the perfect monthly pick-me-up.
+			</div>
+		</div>
+		<div class='frequency_description_button' >
+			<div class='button frequency' id='holiday'>
+				 Before Holidays
+			</div>
+			<div class='frequency_description' >
+				For the hostess with mostess.
+			</div>
+		</div>
+		<div id = "2week" class='flowerSub'>
+		<%= f.radio_button(:subscription_frequency, "2week", :id => "2week_radio", :checked => true) %>	
+		</div>
+		<div id = "4week" class='flowerSub'>
+			<%= f.radio_button(:subscription_frequency, "4week" , :id => "4week_radio") %>
+		</div>
+		<div id = "holiday" class='flowerSub'>
+			<%= f.radio_button(:subscription_frequency, "holiday", :id => "holiday_radio") %>
+		</div>
+	</div>
+	<div id='calendar'> 
+			<h2> 3. When do you want your first delivery? </h2>
+			<div id='datepicker'></div>
+				<%= f.hidden_field :start_date, :id => 'date' %>
+			
+			<div id='subscription_start_date'> </div>
+		
+		</div>
+
+		<div id="order_summary"><br>
+			You will recieve a <div id='typeChoice'>Romantic</div> bouquet every <div id='frequencyChoice'>2 weeks</div>  starting <div id='dateChoice'> <%= Date.today + 7.days%> </div>. 
+		</div>
+	
+		<%= submit_tag("Next: Shipping Information >", class: 'button next_shipping') %>
+		<%end%>
+	
+	
+		</div>
+
+
+

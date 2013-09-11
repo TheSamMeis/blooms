@@ -1,0 +1,16 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#no_account_link a{
+position:relative; 
+left: 255px; 
+bottom: -20px; 
+text-decoration: none;
+color: #b4af7c;
+}
+
+#no_account_link a:hover{
+text-decoration: underline;
+}
