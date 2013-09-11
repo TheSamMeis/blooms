@@ -64,6 +64,7 @@ gem 'rspec-rails', '2.13.1'
 gem 'selenium-webdriver'
 gem "comma", "~> 3.0"
 gem 'figaro'
+gem "libv8", "~> 3.16.14.3"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
