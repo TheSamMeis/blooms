@@ -1,5 +1,5 @@
 class SubscriptionsController < ApplicationController
- before_filter :authorize 
+ # before_filter :authorize 
   layout "dashboard"
 	def index
 
