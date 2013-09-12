@@ -18,7 +18,6 @@
 /log/*.log
 /tmp
 /config/database.yml
-
 /vendor/bundle
 /config/application.yml
 
