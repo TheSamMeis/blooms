@@ -1,15 +1,20 @@
-
+.subListWrapper{
+	width: 100%;
+}
 
 .subscriptionList{
-	width: 400px;
+	width: 600px;
+	min-height: 100px;
+	float:left;
 }
 
 .subscriptionmgmt{
 
-	width: 600px;
+	width: 500px;
 	background-color: #ffa19f;
 	margin: 15px;
 	padding: 30px 30px;
+	float:left;
 
 }
 
@@ -32,9 +37,10 @@
 	padding: 30px;
 	width: 240px;
 	height: 330px;
-	position: relative;
+	float:left;
+/*	position: relative;
 	left: 650px;
-	top: -150px;
+	top: 0;*/
 }
 #typeChoice{
 	display: inline;

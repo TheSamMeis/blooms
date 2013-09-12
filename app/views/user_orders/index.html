@@ -2,33 +2,40 @@
 	<h1> Bonjour, <%=@user.first_name%> </h1> 
 	<h2> Manage your subscriptions </h2>
 
-	<div class="subscriptionList ">
-		<% @user_subscriptions.each do |sub| %>
-		<div class="subscriptionmgmt">
-			<h3 style='color:#000;'> <%= sub.subscription_type %> Flowers Delivered Every <%= sub.frequency_pretty %> </h3>
-			<%= link_to 'Update Shipping Information' , edit_ship_address_path(sub.ship_address.id) %> 
+	<div class='subListWrapper'>
 
-			 <br>
-		  <a href ="#">   Update Billing Information </a>		
+		<div class="subscriptionList ">
+			<%= if @user_subscriptions %>	
+			<% @user_subscriptions.each do |sub| %>
+			<div class="subscriptionmgmt">
+				<h3 style='color:#000;'> <%= sub.subscription_type %> Flowers Delivered Every <%= sub.frequency_pretty %> </h3>
+				<%= link_to 'Update Shipping Information' , edit_ship_address_path(sub.ship_address.id) %> 
+
+				 <br>
+			  <a href ="#">   Update Billing Information </a>		
+			</div>
+			<%end%>
+			<%else%>
+			shit
+
+			<%end%>
 		</div>
-		<%end%>
+		
+		<div class="scallopAccount">
+			<h2 style='margin-bottom:0px;'> Spread The Word. </h2>
+			<h2 style='margin-top:0px;'> Get Bouquets.</h2>
+			<p style="text-align:center;"> 
+				Do your friends love fresh flowers too? Share Gilded Blooms with your BFFs, and get a free delivery for each friend that signs up.
+			</p>
+
+			<p style="text-align:center;"> 
+				Your referral link: http://gildedblooms.com/id
+			</p>
+
+			<p style="text-align:center;"> 
+			You've referred: 1 friend! 
+			</p>
+
+		</div>
 	</div>
-	
-	<div class="scallopAccount">
-		<h2 style='margin-bottom:0px;'> Spread The Word. </h2>
-		<h2 style='margin-top:0px;'> Get Bouquets.</h2>
-		<p style="text-align:center;"> 
-			Do your friends love fresh flowers too? Share Gilded Blooms with your BFFs, and get a free delivery for each friend that signs up.
-		</p>
-
-		<p style="text-align:center;"> 
-			Your referral link: http://gildedblooms.com/id
-		</p>
-
-		<p style="text-align:center;"> 
-		You've referred: 1 friend! 
-		</p>
-
-	</div>
-
 </div>
