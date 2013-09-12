@@ -5,7 +5,6 @@
 	<div class='subListWrapper'>
 
 		<div class="subscriptionList ">
-			<%= if @user_subscriptions %>	
 			<% @user_subscriptions.each do |sub| %>
 			<div class="subscriptionmgmt">
 				<h3 style='color:#000;'> <%= sub.subscription_type %> Flowers Delivered Every <%= sub.frequency_pretty %> </h3>
@@ -14,10 +13,6 @@
 				 <br>
 			  <a href ="#">   Update Billing Information </a>		
 			</div>
-			<%end%>
-			<%else%>
-			shit
-
 			<%end%>
 		</div>
 		
